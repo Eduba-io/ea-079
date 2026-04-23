@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A read on where AI fits in CovertHart's stack | For CovertHart Networks</title>
+  <meta name="description" content="Jake Van Clief read CovertHart's XGS-PON adoption post and cellular failover piece. We have a hypothesis about where the MSSP side of the business is eating margin." />
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div data-eduba="banner" style="background:#0a0a0a;color:#f5f5f5;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:0.01em;border-bottom:1px solid #1f1f1f;position:relative;z-index:1000;">
+  <a href="https://eduba.io" target="_blank" rel="noopener" style="color:#f5f5f5;text-decoration:none;font-weight:800;font-size:17px;letter-spacing:-0.02em;line-height:1;">eduba</a>
+  <span style="opacity:0.88;">Prepared by Eduba for CovertHart Networks &mdash; Emerge Americas 2026</span>
+</div>
+
+
+  <header class="topbar" role="banner">
+    <div class="topbar__inner">
+      <a class="topbar__logo" href="https://www.coverthart.com/" target="_blank" rel="noopener" aria-label="CovertHart Networks">
+        <img src="logo.svg" alt="CovertHart Networks" />
+      </a>
+      <div class="topbar__meta" aria-hidden="true">
+        <strong>AS34437</strong> &middot; Miami Lakes, FL
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__eyebrow"><span class="dot" aria-hidden="true"></span> Prepared for CovertHart Networks &middot; eMerge Americas 2026</div>
+      <h1>A read on where AI fits in CovertHart's stack, and <span class="accent">where it does not</span>.</h1>
+      <p class="hero__sub">Deployment speed is where incumbents cannot deliver. The part that matters for scale is how a small U.S.-based team manages a growing list of client contexts without losing margin.</p>
+
+      <dl class="hero__facts" aria-label="CovertHart context">
+        <div class="fact">
+          <div class="fact__k">Backbone</div>
+          <div class="fact__v mono">AS34437 &middot; Cogent + Telefonica peering</div>
+        </div>
+        <div class="fact">
+          <div class="fact__k">Product lines</div>
+          <div class="fact__v">Fiber, FWA, 5G business internet, MPLS, MSSP</div>
+        </div>
+        <div class="fact">
+          <div class="fact__k">Operating posture</div>
+          <div class="fact__v">100% U.S.-based staff. Month-to-month contracts.</div>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section__eyebrow">The frame</div>
+      <h2>Most AI consultants sell a new model. The useful work is deciding where the model belongs.</h2>
+      <div class="prose">
+        <p class="section__lede">Most companies shopping for an AI consultant assume the answer is a new model, a new platform, or a new license. That is usually wrong. The right frame is a simple three-way split of any ops problem. The useful job of an outside consultant is figuring out which layer each piece of a problem belongs on.</p>
+      </div>
+
+      <div class="mix" role="list" aria-label="The 60/30/10 frame">
+        <div class="mix__cell" role="listitem">
+          <div class="mix__pct">60%</div>
+          <div class="mix__label">Traditional code</div>
+          <p class="mix__desc">Databases, services, scripts. The work Postgres and a cron job handle faster, cheaper, and with better guarantees than any LLM.</p>
+        </div>
+        <div class="mix__cell" role="listitem">
+          <div class="mix__pct">30%</div>
+          <div class="mix__label">Rule-based logic</div>
+          <p class="mix__desc">Deterministic routing, thresholds, policy trees. Cheap, auditable, testable. The layer most MSSPs under-invest in.</p>
+        </div>
+        <div class="mix__cell" role="listitem">
+          <div class="mix__pct">10%</div>
+          <div class="mix__label">Genuine AI work</div>
+          <p class="mix__desc">Alert correlation, unstructured-to-structured transforms, context retrieval. The pieces that are actually model-shaped.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="container">
+      <div class="section__eyebrow">Applied to the MSSP operation</div>
+      <h2>Managed firewall, WAF, IPS, SIEM, email protection, vulnerability management. Each one sits on a different layer.</h2>
+      <p class="section__lede">For an MSSP operation that runs those services across multiple clients, the mapping is specific. It is also the part that decides whether per-client margin holds as the account list grows.</p>
+
+      <div class="layers" role="list" aria-label="Layered mapping">
+        <div class="layer" role="listitem">
+          <span class="layer__tag">AI-shaped</span>
+          <h3>Alert correlation and context retrieval</h3>
+          <p>Pull the right per-client baseline, history, and similar incidents into an analyst's view at the moment of triage. Reduces the time from alert to first hypothesis.</p>
+        </div>
+        <div class="layer" role="listitem">
+          <span class="layer__tag rule">Rule-shaped</span>
+          <h3>Triage routing and escalation</h3>
+          <p>Deterministic policy. Which client, which severity, which analyst, which SLA clock, which on-call tree. Rules belong here, not a model.</p>
+        </div>
+        <div class="layer" role="listitem">
+          <span class="layer__tag doc">Document-shaped</span>
+          <h3>Evidence packaging for compliance</h3>
+          <p>SOC 2, HIPAA, CMMC. Mostly structured-document work. Compresses hard when per-client context is organized rather than scattered across tools.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="navy">
+    <div class="container">
+      <div class="section__eyebrow">Proof of shape</div>
+      <h2>A compliance platform built for a different regulated operator, similar shape to the MSSP evidence workflow.</h2>
+      <p class="section__lede">Not identical. Not a drop-in. The same shape.</p>
+
+      <div class="evidence">
+        <div class="evidence__metric">
+          <span class="evidence__num">160+ hours &rarr; under 5 minutes</span>
+          <span class="evidence__label">Per compliance cycle</span>
+        </div>
+        <p>Eduba built a multi-agent compliance platform for VigilOre, an operator in the DRC mining supply chain. The write-up and attestation work that used to take their team 160+ hours per cycle now runs in under 5 minutes. MSSP evidence packaging (SOC 2, HIPAA, CMMC, vulnerability-scan reports, incident logs) is the same structured-document problem in a different vertical.</p>
+      </div>
+
+      <div class="paper">
+        <div class="prose">
+          <p>The methodology behind that build is published. <strong>Interpretable Context Methodology: Folder Structure as Agent Architecture</strong>, submitted to ACM TiiS. The idea is that client context can be organized as a layered filesystem with measurable interpretability gains. That is exactly how an MSSP should store per-client configuration, escalation trees, and compliance evidence so that any analyst on the team can pick up any client without losing the prior context.</p>
+          <p>A small U.S.-based team running like a large SOC without hiring for it. That is the useful outcome.</p>
+        </div>
+        <dl class="paper__meta" aria-label="Methodology references">
+          <dt>Paper</dt>
+          <dd><a href="https://github.com/RinDig/Interpretable-Context-Methodology-ICM-" target="_blank" rel="noopener">github.com/RinDig/Interpretable-Context-Methodology-ICM-</a></dd>
+          <dt>Submitted to</dt>
+          <dd>ACM Transactions on Interactive Intelligent Systems</dd>
+          <dt>Partner routing</dt>
+          <dd>Eduba partners with NLP Logix for work that sits below the orchestration layer. NLP Logix has been in machine learning since 2011 and runs over 150 data scientists. If the path leads to production SIEM data pipelines, that is where it routes.</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="container">
+      <div class="section__eyebrow">Next step</div>
+      <div class="cta-card">
+        <div>
+          <p class="who">30 minutes with Matt Creamer, Eduba CRO</p>
+          <h2>Bring one workflow that eats analyst hours.</h2>
+          <p>Matt is Jake Van Clief's colleague and handles initial scoping conversations. We will map the workflow to the 60/30/10 frame live on the call. You will leave with a concrete read on where to start, whether or not you hire us.</p>
+          <a class="btn" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">Book 30 minutes with Matt <span class="btn__arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+        <aside class="cta-aside" aria-label="What to bring">
+          <p class="who">What to bring</p>
+          <ul>
+            <li>One MSSP workflow that burns analyst hours right now.</li>
+            <li>The rough client count and alert volume per shift.</li>
+            <li>The compliance attestations prospects are asking for.</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site" role="contentinfo">
+    <div class="container">
+      <span class="prepared">Prepared by Eduba, <a href="https://eduba.io" target="_blank" rel="noopener">eduba.io</a> &middot; <a href="https://eduba.io/works" target="_blank" rel="noopener">More case studies</a></span>
+      <span>For CovertHart Networks &middot; <a href="https://www.coverthart.com/" target="_blank" rel="noopener">coverthart.com</a></span>
+    </div>
+  </footer>
+
+<footer data-eduba="footer" style="background:#0a0a0a;color:#dcdcdc;padding:36px 20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6;border-top:1px solid #1f1f1f;margin-top:48px;">
+  <div style="max-width:1040px;margin:0 auto;">
+    <div style="display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between;align-items:flex-start;">
+      <div style="min-width:240px;flex:1;">
+        <div style="margin-bottom:6px;"><a href="https://eduba.io" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:none;font-weight:800;font-size:20px;letter-spacing:-0.02em;">eduba</a></div>
+        <div style="opacity:0.85;margin-bottom:4px;">Van Clief Media LLC, dba Eduba</div>
+        <div style="opacity:0.7;">Veteran-owned AI consulting and training firm</div>
+      </div>
+      <div style="min-width:220px;flex:1;">
+        <div style="color:#ffffff;font-weight:600;margin-bottom:2px;">Matt Creamer, CRO</div>
+        <div style="margin-bottom:10px;"><a href="mailto:thecro@eduba.io" style="color:#dcdcdc;text-decoration:underline;">thecro@eduba.io</a></div>
+        <div style="opacity:0.85;">Founder: Jake Van Clief</div>
+      </div>
+      <div style="min-width:180px;flex:1;">
+        <div style="margin-bottom:4px;"><a href="https://eduba.io" target="_blank" rel="noopener" style="color:#dcdcdc;text-decoration:underline;">eduba.io</a></div>
+        <div style="opacity:0.85;">Palm Coast, FL</div>
+      </div>
+    </div>
+    <div style="margin-top:24px;padding-top:16px;border-top:1px solid #1f1f1f;opacity:0.62;font-size:12px;line-height:1.55;">
+      This site was custom-built by Eduba as a conference pitch. It is not affiliated with or operated by CovertHart Networks.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
